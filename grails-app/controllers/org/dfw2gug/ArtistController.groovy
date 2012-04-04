@@ -71,7 +71,9 @@ class ArtistController {
             }
         }
 
-        artistInstance.properties = params
+        artistInstance.properties['name','style'] = params
+
+        artistInstance.birthDate = Date.parse('MM/dd/yyyy',params.birthDate)
 
         if (!artistInstance.save(flush: true)) {
             render(view: "edit", model: [artistInstance: artistInstance])

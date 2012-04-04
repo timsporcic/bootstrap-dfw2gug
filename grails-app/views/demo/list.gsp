@@ -44,7 +44,9 @@
                     </td>
                     <td><g:formatDate format="MM/dd/yyyy" date="${artistInstance.birthDate}"/></td>
                     <td><g:fieldValue field="style" bean="${artistInstance}"/></td>
-                    <td>${artistInstance.works.size()}</td>
+                    <td>
+                        ${artistInstance.works.size()}
+                    </td>
                 </tr>
                 </g:each>
                 </tbody>

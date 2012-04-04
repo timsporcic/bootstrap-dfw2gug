@@ -1,5 +1,7 @@
 package org.dfw2gug
 
+import java.text.ParseException
+
 class DemoController {
 
     def index() { }
@@ -53,9 +55,12 @@ class DemoController {
         artistInstance.properties['name','style'] = params
 
         try {
+            if (params.birthDate.length() > 0)
             artistInstance.birthDate = Date.parse('MM/dd/yyyy',params.birthDate)
-        } catch(ParseException) {
-            artistInstance.birthDate = null
+        } catch(ParseException pex) {
+            flash.message = message(code: 'invalid.date.format', args: [params.birthDate])
+            render(view: "edit", model: [artistInstance: artistInstance])
+            return
         }
 
         if (!artistInstance.save(flush: true)) {
@@ -63,7 +68,7 @@ class DemoController {
             return
         }
 
-        flash.message = message(code: 'default.updated.message', args: [message(code: 'artist.label', default: 'Artist'), artistInstance.id])
+        flash.message = message(code: 'artist.updated.message', args: [artistInstance.name])
         redirect(action: "show", id: artistInstance.id)
     }
 

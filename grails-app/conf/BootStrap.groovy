@@ -19,7 +19,7 @@ class BootStrap {
 
             new Work(title: 'Falling Star', created: new Date('4/5/2011'), price: 1000, artist: Artist.findByName('Bill Conner')).save()
             new Work(title: 'Blue Moon', created: new Date('6/11/2011'), price: 950, artist: Artist.findByName('Bill Conner')).save()
-            new Work(title: 'Mars Alive', created: new Date('2/1/2011'), price: 975, artist: Artist.findByName('Bill Conner')).save()
+            new Work(title: 'Mars Alive', created: new Date('4/1/2012'), price: 975, artist: Artist.findByName('Bill Conner')).save()
 
             new Work(title: 'Old Woman', created: new Date('8/3/2010'), price: 1500, artist: Artist.findByName('Warren Levin')).save()
             new Work(title: 'Old Shoe', created: new Date('3/16/2010'), price: 1500, artist: Artist.findByName('Warren Levin')).save()

@@ -40,9 +40,8 @@
                 <g:render template="form"/>
                 <div class="form-actions right">
 
-                    <g:submitButton name="update" value="Save" class="btn btn-primary">
-                        <i class="icon-check"></i>
-                        </g:submitButton>
+
+                    <a href="#" class="btn btn-primary" id="submitLink"><i class="icon-check icon-white"></i> Update</a>
 
                     <g:link action="show" id="${artistInstance.id}" class="btn">
                         <i class="icon-remove"></i> Cancel
@@ -57,6 +56,11 @@
     $(document).ready(function () {
         $('.navbar-fixed-top ul.nav li').removeClass('active');
         $('#formPage').addClass('active');
+
+        $('#submitLink').click(function(e){
+            e.preventDefault();
+            $('form').submit();
+        });
     });
 </script>
 

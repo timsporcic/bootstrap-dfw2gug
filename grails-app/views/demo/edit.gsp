@@ -51,10 +51,15 @@
             </g:form>
         </div>
     </div>
-
-
-
-
 </div>
+
+<script>
+    $(document).ready(function () {
+        $('.navbar-fixed-top ul.nav li').removeClass('active');
+        $('#formPage').addClass('active');
+    });
+</script>
+
+
 </body>
 </html>

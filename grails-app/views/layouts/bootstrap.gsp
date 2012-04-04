@@ -19,7 +19,7 @@
                     <li id="homePage" class="active"><g:link controller="demo" action="index">Home</g:link></li>
                     <li id="listPage"><g:link controller="demo" action="list">List</g:link></li>
                     <li id="showPage"><g:link controller="demo" action="show">Show</g:link></li>
-                    <li id="formPage"><g:link controller="demo" action="form">Form</g:link></li>
+                    <li id="formPage"><g:link controller="demo" action="edit">Form</g:link></li>
                 </ul>
             </div>
         </div>

@@ -10,11 +10,9 @@ modules = {
 
     overrides {
         jquery {
-            defaultBundle 'application'
+            defaultBundle 'bootstrap'
         }
     }
-
 }
-
 
 
